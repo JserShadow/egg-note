@@ -15,4 +15,10 @@
 -- 其余结构用到再说
 ### router.js
 - app.get(url,controller)  controller：可以写成  "home.index" 或 app.controller.home.index
-- app.redirect(url,anotherUrl)  重定向 可连接静态资源
+- app.redirect(url,anotherUrl)  重定向 可连接静态资源   有时会出问题(把浏览器的表单自动填充数据删掉就好了)
+### controller
+- ctx.body   服务器返回的数据
+- ctx.params  get请求query里的数据
+- ctx.crul(url,options)   处理HTTP请求，options是设置请求头 请求回来的数据默认是buffer  
+  设置dataType为'json'
+
